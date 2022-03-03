@@ -8,9 +8,10 @@ public class Portal : Collidable
     {
         if (coll.name == "Player"){
             //teleport the player
+            GameManager.instance.savedState();
             SceneManager.LoadScene(1);
 
-
+        
         }
     }
 

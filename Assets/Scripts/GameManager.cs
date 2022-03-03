@@ -6,9 +6,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     private void Awake() {
+
+        if(GameManager.instance !=null){
+            Destroy(gameObject);
+            return;
+        }
+
         instance = this;
-        SceneManager.sceneLoaded+= savedState;
         SceneManager.sceneLoaded+= LoadState;
+        DontDestroyOnLoad(gameObject);
     }
 
     //Resources
@@ -26,12 +32,36 @@ public class GameManager : MonoBehaviour
     public int XP;
 
     //save states
-    public void savedState(Scene s,LoadSceneMode mode){
+    /*
+    * INT Skin
+    * INT Gold
+    * INT XP
+    * INT WeaponLvl
+    */
+    public void savedState(){
         Debug.Log("Save state");
+        string s ="";
+        s += "0" + "|";
+        s += gold.ToString() + "|";
+        s += XP.ToString() + "|";
+        s += "0";
 
+        PlayerPrefs.SetString("SaveState", s);
     }
     
     public void LoadState(Scene s,LoadSceneMode mode){
+
+        if (!PlayerPrefs.HasKey("SaveState")){
+            return;
+        }
+
+        string[] data = PlayerPrefs.GetString("SaveState").Split('|');
+        
+        //Change Player skin
+        gold = int.Parse(data[1]);
+        XP = int.Parse(data[2]);
+        //Change Weapon LVL
+
         Debug.Log("Load State");
     }
 
