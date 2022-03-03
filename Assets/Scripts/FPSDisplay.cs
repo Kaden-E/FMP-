@@ -5,6 +5,7 @@ public class FPSDisplay : MonoBehaviour
 {
     public int avgFrameRate;
     public Text display_Text;
+
  
     /*public void Start()
     {

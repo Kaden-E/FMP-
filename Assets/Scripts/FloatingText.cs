@@ -5,7 +5,7 @@ public class FloatingText
 {
     public bool active;
     public GameObject go;
-    public TextAlignment txt;
+    public Text txt;
     public Vector3 motion;
     public float duration;
     public float lastShown;
