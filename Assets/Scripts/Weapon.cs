@@ -6,6 +6,7 @@ public class Weapon : Collidable
 {
     // Damage struct
 
+    
     public int damagePoint = 1;
     public float pushForce = 2.0f;
 
@@ -47,7 +48,15 @@ public class Weapon : Collidable
                 
                 return;
             }
+            Damage dmg = new Damage{
+                dmgAmount = damagePoint,
+                origin = transform.position,
+                pushForce = pushForce
+            };
+            coll.SendMessage("ReciveDamage", dmg);
             Debug.Log(coll.name);
+
+            
         }
 
   

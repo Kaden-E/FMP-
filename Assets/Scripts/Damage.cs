@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Vector3 origin;
+    public int dmgAmount;
+    public float pushForce;
 }
