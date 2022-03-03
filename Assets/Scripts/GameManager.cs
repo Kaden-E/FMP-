@@ -26,10 +26,16 @@ public class GameManager : MonoBehaviour
     //Refrences
     public Player player;
     //public weapon weapon
+    public FloatingTextManager floatingTextManager;
 
     //logic 
     public int gold;
     public int XP;
+
+    public void ShowText(string msg, int fontSize, Color colour, Vector3 position, Vector3 motion, float duration){
+        floatingTextManager.show(msg, fontSize, colour, position, motion, duration);
+    }
+
 
     //save states
     /*
