@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Mover : Fighter
+public class Mover : Fighter
 {
 
     public BoxCollider2D boxCollider;
     private Vector3 moveDelta;
     private RaycastHit2D hit;
-
+    
     protected float yspeed = 0.75f;
     protected float xspeed = 1.0f;
-    protected virtual void start()
-    {
+
+    protected virtual void Start(){
         boxCollider = GetComponent<BoxCollider2D>();
     }
 

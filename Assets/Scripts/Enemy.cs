@@ -22,9 +22,9 @@ public class Enemy : Mover
     private BoxCollider2D hitBox;
     private Collider2D[] hits = new Collider2D[10];
 
-    protected override void start()
+    protected override void Start()
     {
-        base.start();
+        base.Start();
         playerTransform = GameManager.instance.player.transform;
         startingPos = transform.position;
         hitBox = transform.GetChild(0).GetComponent<BoxCollider2D>();
