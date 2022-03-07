@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DontDestroy
   - Fighter
+  - betashit
   layers:
   - Default
   - TransparentFX
