@@ -41,7 +41,30 @@ public class CharacterMenu : MonoBehaviour
     //Weapon upgrade
 
     public void OnUpgradeClick(){
+        //
+    }
+
+    //Update the char info
+    public void UpdateMenu(){
+
+        //Weapon
+
+        weaponSprite.sprite = GameManager.instance.weaponSprites[0];
+        upgradeText.text = "NOT IMPLEMENTED";
+
+        //meta
+
+        hitpointText.text = GameManager.instance.player.hitPoint.ToString();
+        goldText.text = GameManager.instance.gold.ToString();
+        levelText.text = "NOT IMPLEMENTED";
+
+        //XP bar
+        xpText.text = "NOT IMPLMEENTED";
+        xpBar.localScale = new Vector3(0.5f, 0, 0);
 
     }
+
+
+
 
 }
