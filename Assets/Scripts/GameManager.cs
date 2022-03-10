@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
         instance = this;
         SceneManager.sceneLoaded+= LoadState;
         DontDestroyOnLoad(gameObject);
+        //This function resets progress.
+        //PlayerPrefs.DeleteAll();
     }
+    
 
     //Resources
     public List<Sprite> playerSprites;
