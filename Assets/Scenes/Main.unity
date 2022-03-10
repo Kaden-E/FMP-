@@ -123,6 +123,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4975560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4975561}
+  m_Layer: 0
+  m_Name: Spawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4975561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4975560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.011, y: -0.282, z: -0.038659282}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &77862522
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +474,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 148026460}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1377234782}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: OnArrowClick
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &148026460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8763,7 +8805,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cec6a2ab71c0d74fa97f6cffcd74cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSprites: []
+  playerSprites:
+  - {fileID: -4869357254534750094, guid: d7de18341d77dfd488f37bd04f013924, type: 3}
+  - {fileID: -6721728136321296765, guid: d7de18341d77dfd488f37bd04f013924, type: 3}
+  - {fileID: 2495676471409746333, guid: d7de18341d77dfd488f37bd04f013924, type: 3}
+  - {fileID: -8316447183620893927, guid: d7de18341d77dfd488f37bd04f013924, type: 3}
   weaponSprites:
   - {fileID: 5330871289308464701, guid: d7de18341d77dfd488f37bd04f013924, type: 3}
   - {fileID: -69871916218363647, guid: d7de18341d77dfd488f37bd04f013924, type: 3}
@@ -8771,8 +8817,8 @@ MonoBehaviour:
   - {fileID: -8143584818952536569, guid: d7de18341d77dfd488f37bd04f013924, type: 3}
   - {fileID: 4289113178680934050, guid: d7de18341d77dfd488f37bd04f013924, type: 3}
   - {fileID: 4564897580977227239, guid: d7de18341d77dfd488f37bd04f013924, type: 3}
-  weaponPrices: 32000000960000002c010000f40100009e020000
-  xpTable: 
+  weaponPrices: 64000000aa000000fa0000009001000058020000
+  xpTable: 050000000a00000014000000280000003c000000500000008c000000040100009001000058020000
   player: {fileID: 1866671572}
   weapon: {fileID: 1714800150}
   floatingTextManager: {fileID: 1632861988}
@@ -8790,7 +8836,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &499070538
 GameObject:
@@ -8969,7 +9015,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &593020130
 GameObject:
@@ -9314,7 +9360,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 761562579}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1377234782}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: OnArrowClick
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &761562579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9482,7 +9540,7 @@ Transform:
   - {fileID: 336109936}
   - {fileID: 1038532383}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1038532382
 GameObject:
@@ -19836,7 +19894,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1355104267
 GameObject:
@@ -20317,7 +20375,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1460418399
 MonoBehaviour:
@@ -20723,14 +20781,14 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  damagePoint: 010000000200000003000000040000000500000006000000
+  damagePoint: 01000000020000000300000004000000050000000a000000
   pushForce:
   - 2
   - 2.2
-  - 2.4
-  - 2.6
-  - 2.8
+  - 2.5
   - 3
+  - 5
+  - 7
   WeaponLvl: 0
   spriteRenderer: {fileID: 1714800148}
 --- !u!95 &1714800151
@@ -20922,7 +20980,7 @@ Transform:
   - {fileID: 1224762537}
   - {fileID: 1628913665}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1863422998
 GameObject:
@@ -21194,7 +21252,7 @@ Transform:
   m_Children:
   - {fileID: 1714800147}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1939795726
 GameObject:
