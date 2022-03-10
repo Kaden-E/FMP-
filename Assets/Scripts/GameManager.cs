@@ -64,9 +64,50 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
+   /* private void Update(){
+        Debug.Log(GetCurrentLvl());
+    }*/
 
+    //XP system
 
+    public int GetCurrentLvl(){
+        int r = 0;
+        int add = 0;
 
+        while (XP >= add){
+            add += xpTable[r];
+            r++;
+
+            if( r == xpTable.Count){ //Max lvl
+                return r;
+            }
+        }
+        return r;
+    }
+
+    public int GetXpToLevel(int level){
+        int r = 0;
+        int xp = 0;
+
+        while (r < level){
+            xp += xpTable[r];
+            r++;
+        }
+        return xp;
+    }
+
+    public void GrantXp(int xp){
+        int currLvl = GetCurrentLvl();
+        XP += xp;
+        if(currLvl < GetCurrentLvl()){
+            OnLevelUp();
+        }
+    }
+
+    public void OnLevelUp(){
+        Debug.Log("Level Up!");
+        player.OnLevelUp();
+    }
 
     public void savedState(){
         Debug.Log("Save state");
@@ -78,7 +119,9 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetString("SaveState", s);
     }
-    
+  
+  
+
     public void LoadState(Scene s,LoadSceneMode mode){
 
         if (!PlayerPrefs.HasKey("SaveState")){
@@ -90,6 +133,10 @@ public class GameManager : MonoBehaviour
         //Change Player skin
         gold = int.Parse(data[1]);
         XP = int.Parse(data[2]);
+        if(GetCurrentLvl() != 1){
+            player.SetLevel(GetCurrentLvl());
+        }
+        
         //Change Weapon LVL
         weapon.SetWeaponLvl(int.Parse(data[3]));
 

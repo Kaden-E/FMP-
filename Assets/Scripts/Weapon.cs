@@ -70,7 +70,7 @@ public class Weapon : Collidable
 
 
     private void Swing(){
-        Debug.Log("Swing");
+        //Debug.Log("Swing");
         anim.SetTrigger("Swing");
     }
 
