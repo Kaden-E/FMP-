@@ -8771,9 +8771,10 @@ MonoBehaviour:
   - {fileID: -8143584818952536569, guid: d7de18341d77dfd488f37bd04f013924, type: 3}
   - {fileID: 4289113178680934050, guid: d7de18341d77dfd488f37bd04f013924, type: 3}
   - {fileID: 4564897580977227239, guid: d7de18341d77dfd488f37bd04f013924, type: 3}
-  weaponPrices: 
+  weaponPrices: 32000000960000002c010000f40100009e020000
   xpTable: 
   player: {fileID: 1866671572}
+  weapon: {fileID: 1714800150}
   floatingTextManager: {fileID: 1632861988}
   gold: 0
   XP: 0
@@ -19495,7 +19496,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1247262617}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1377234782}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: OnUpgradeClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1247262617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20710,9 +20723,16 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  damagePoint: 1
-  pushForce: 4
+  damagePoint: 010000000200000003000000040000000500000006000000
+  pushForce:
+  - 2
+  - 2.2
+  - 2.4
+  - 2.6
+  - 2.8
+  - 3
   WeaponLvl: 0
+  spriteRenderer: {fileID: 1714800148}
 --- !u!95 &1714800151
 Animator:
   serializedVersion: 3

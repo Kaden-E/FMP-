@@ -7,12 +7,12 @@ public class Weapon : Collidable
     // Damage struct
 
     
-    public int damagePoint = 1;
-    public float pushForce = 2.0f;
+    public int[] damagePoint = {1, 2, 3, 4, 5, 6};
+    public float[] pushForce = {2.0f, 2.2f, 2.4f, 2.6f, 2.8f, 3.0f};
 
     //Upgrades
     public int WeaponLvl = 0;
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
     //swing
     private Animator anim;
@@ -34,10 +34,14 @@ public class Weapon : Collidable
         base.Update();
 
         if (Input.GetKeyDown(KeyCode.Mouse0)){
-            if (Time.time - lastSwing > cooldown){
+            if(Time.timeScale == 1.0f){
+                if (Time.time - lastSwing > cooldown){
                 lastSwing = Time.time;
                 Swing();
             }
+
+            }
+
         }
     }
 
@@ -51,9 +55,9 @@ public class Weapon : Collidable
                 return;
             }
             Damage dmg = new Damage{
-                dmgAmount = damagePoint,
+                dmgAmount = damagePoint[WeaponLvl],
                 origin = transform.position,
-                pushForce = pushForce
+                pushForce = pushForce[WeaponLvl],
             };
             coll.SendMessage("ReciveDamage", dmg);
             Debug.Log(coll.name);
@@ -70,7 +74,17 @@ public class Weapon : Collidable
         anim.SetTrigger("Swing");
     }
 
+    public void UpgradeWeapon(){
+        WeaponLvl++;
+        spriteRenderer.sprite = GameManager.instance.weaponSprites[WeaponLvl];
+        
+    }
 
+   public void SetWeaponLvl(int level){
+       WeaponLvl = level;
+       spriteRenderer.sprite = GameManager.instance.weaponSprites[WeaponLvl];
+
+   }
 
 
 
