@@ -9,17 +9,20 @@ public class GameManager : MonoBehaviour
 
         if(GameManager.instance !=null){
             Destroy(gameObject);
+            Destroy(player.gameObject);
+            Destroy(floatingTextManager.gameObject);
+            Destroy(HUD);
+            Destroy(menu);
             return;
         }
 
         instance = this;
         SceneManager.sceneLoaded+= LoadState;
-        DontDestroyOnLoad(gameObject);
         //This function resets progress.
         //PlayerPrefs.DeleteAll();
     }
     
-
+    #region Vars
     //Resources
     public List<Sprite> playerSprites;
     public List<Sprite> weaponSprites;
@@ -30,11 +33,14 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Weapon weapon;
     public FloatingTextManager floatingTextManager;
+    public RectTransform hitPointBar;
+    public GameObject HUD;
+    public GameObject menu;
 
     //logic 
     public int gold;
     public int XP;
-
+    #endregion
     public void ShowText(string msg, int fontSize, Color colour, Vector3 position, Vector3 motion, float duration){
         floatingTextManager.show(msg, fontSize, colour, position, motion, duration);
     }
@@ -119,8 +125,6 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetString("SaveState", s);
     }
-  
-  
 
     public void LoadState(Scene s,LoadSceneMode mode){
 
@@ -144,7 +148,17 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("Load State");
     }
-
     
+    //hitpoint Bar
+    public void OnHitPointChange(){
+        float ratio = (float)player.hitPoint / (float)player.maxHitpoint;
+        hitPointBar.localScale = new Vector3 (1, ratio, 1);
+
+    }
+
+
+
+
+
 
 }
