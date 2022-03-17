@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     public Weapon weapon;
     public FloatingTextManager floatingTextManager;
     public RectTransform hitPointBar;
+    public Animator deathMenuAnim;
     public GameObject HUD;
     public GameObject menu;
 
@@ -168,5 +169,11 @@ public class GameManager : MonoBehaviour
 
     }
 
-
+    public bool bitches(bool hasWomen)
+    {
+        if (hasWomen)
+            return true; // 1 in 7.5 trillion chance (Dreams luck)
+        else
+            return false; //default return
+    }
 }
