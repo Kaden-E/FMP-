@@ -20268,7 +20268,7 @@ GameObject:
   - component: {fileID: 1460418396}
   - component: {fileID: 1460418399}
   m_Layer: 8
-  m_Name: Test_NPC
+  m_Name: Intro_NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20287,7 +20287,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.008123837, y: 0.004529819}
+  m_Offset: {x: 0.010456048, y: -0.0060106963}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -20298,7 +20298,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.08134146, y: 0.12879458}
+  m_Size: {x: 0.11850123, y: 0.14987561}
   m_EdgeRadius: 0
 --- !u!212 &1460418397
 SpriteRenderer:
@@ -20375,7 +20375,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1460418395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b69fde58224f14d45bfd143df928a1c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 88c93f472a49766439ff52d699e4ce84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   filter:
@@ -20392,6 +20392,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  message: Welcome to the dungeon. Press WASD to move
 --- !u!1 &1501967506
 GameObject:
   m_ObjectHideFlags: 0
@@ -21088,8 +21089,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b45d114facd5546bdc6b81c12c1d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoint: 5
-  maxHitpoint: 5
+  hitPoint: 10
+  maxHitpoint: 10
   pushRecoverySpeed: 0.2
   boxCollider: {fileID: 1866671571}
 --- !u!212 &1866671573
