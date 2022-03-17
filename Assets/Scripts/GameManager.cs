@@ -26,13 +26,13 @@ public class GameManager : MonoBehaviour
     }
 
     #region Vars
-    //Resources
+    [Header("Resources")]
     public List<Sprite> playerSprites;
     public List<Sprite> weaponSprites;
     public List<int> weaponPrices;
     public List<int> xpTable;
 
-    //Refrences
+    [Header("Refrences")]
     public Player player;
     public Weapon weapon;
     public FloatingTextManager floatingTextManager;
@@ -40,16 +40,15 @@ public class GameManager : MonoBehaviour
     public GameObject HUD;
     public GameObject menu;
 
-    //logic 
+    [Header("Logic")]
     public int gold;
     public int XP;
     #endregion
+
     public void ShowText(string msg, int fontSize, Color colour, Vector3 position, Vector3 motion, float duration)
     {
         floatingTextManager.show(msg, fontSize, colour, position, motion, duration);
     }
-
-
 
 
     //Upgrade weapon
@@ -168,10 +167,6 @@ public class GameManager : MonoBehaviour
         hitPointBar.localScale = new Vector3(1, ratio, 1);
 
     }
-
-
-
-
 
 
 }
