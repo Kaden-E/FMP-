@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
         instance = this;
         SceneManager.sceneLoaded+= LoadState;
+        SceneManager.sceneLoaded += OnSceneLoaded;
         //This function resets progress.
         //PlayerPrefs.DeleteAll();
     }
@@ -46,13 +47,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    //save states
-    /*
-    * INT Skin
-    * INT Gold
-    * INT XP
-    * INT WeaponLvl
-    */
+
 
     //Upgrade weapon
     public bool TryUpgradeWeapon(){
@@ -70,11 +65,9 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
-   /* private void Update(){
-        Debug.Log(GetCurrentLvl());
-    }*/
-
-    //XP system
+    public void OnSceneLoaded(Scene s, LoadSceneMode mode){
+        player.transform.position = GameObject.Find("Spawnpoint").transform.position;
+    }
 
     public int GetCurrentLvl(){
         int r = 0;
@@ -113,10 +106,11 @@ public class GameManager : MonoBehaviour
     public void OnLevelUp(){
         Debug.Log("Level Up!");
         player.OnLevelUp();
+        OnHitPointChange();
     }
 
     public void savedState(){
-        Debug.Log("Save state");
+        
         string s ="";
         s += "0" + "|";
         s += gold.ToString() + "|";
@@ -127,6 +121,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void LoadState(Scene s,LoadSceneMode mode){
+        SceneManager.sceneLoaded -= LoadState;
 
         if (!PlayerPrefs.HasKey("SaveState")){
             return;
@@ -144,9 +139,7 @@ public class GameManager : MonoBehaviour
         //Change Weapon LVL
         weapon.SetWeaponLvl(int.Parse(data[3]));
 
-        player.transform.position = GameObject.Find("Spawnpoint").transform.position;
-
-        Debug.Log("Load State");
+        
     }
     
     //hitpoint Bar
