@@ -15,6 +15,10 @@ public class Player : Mover
 
     protected override void ReciveDamage(Damage dmg)
     {
+        if (!isAlive)
+        {
+            return;
+        }
         base.ReciveDamage(dmg);
         GameManager.instance.OnHitPointChange();
     }
@@ -73,6 +77,13 @@ public class Player : Mover
         GameManager.instance.deathMenuAnim.SetTrigger("Show");
     }
 
+    public void Respawn()
+    {
+        Heal(maxHitpoint);
+        isAlive = true;
+        lastImmune = Time.time;
+        pushDirection = Vector3.zero;
+    }
 
 
 }

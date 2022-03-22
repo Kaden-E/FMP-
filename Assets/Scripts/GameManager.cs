@@ -176,4 +176,13 @@ public class GameManager : MonoBehaviour
         else
             return false; //default return
     }
+
+    //Death Menu and respawn
+    public void Respawn()
+    {
+        deathMenuAnim.SetTrigger("Hide");
+        SceneManager.LoadScene("Main");
+        player.Respawn();
+    }
+
 }
