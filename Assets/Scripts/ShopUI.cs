@@ -1,22 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ShopUI : Collidable
+public class ShopUI : MonoBehaviour
 {
-    Animator anim;
 
-    void start(){
-        anim = GetComponent<Animator>();
-    }
-    private void OnTriggerEnter2D(Collider2D col) {
-        if (col.gameObject.CompareTag("Fighter")){
-            Debug.Log("hfhfhfh");
-            anim.Play("Shop_Showing");
-        }
+    public Image petSprite;
+
+    public void OnUpgradeClick()
+    {
+        GameManager.instance.TryUpgradePet();
     }
 
-    
+
 
 
 }

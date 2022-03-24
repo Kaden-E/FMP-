@@ -29,12 +29,15 @@ public class GameManager : MonoBehaviour
     [Header("Resources")]
     public List<Sprite> playerSprites;
     public List<Sprite> weaponSprites;
+    public List<Sprite> petSprites;
     public List<int> weaponPrices;
+    public List<int> petPrices;
     public List<int> xpTable;
 
     [Header("Refrences")]
     public Player player;
     public Weapon weapon;
+    public Pet pet;
     public FloatingTextManager floatingTextManager;
     public RectTransform hitPointBar;
     public Animator deathMenuAnim;
@@ -169,13 +172,22 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public bool bitches(bool hasWomen)
+    public bool TryUpgradePet()
     {
-        if (hasWomen)
-            return true; // 1 in 7.5 trillion chance (Dreams luck)
-        else
-            return false; //default return
+        if (petPrices.Count <= pet.PetLvl)
+        {
+            return false;
+        }
+
+        if (gold >= petPrices[pet.PetLvl])
+        {
+            gold -= petPrices[pet.PetLvl];
+            pet.UpgradePet();
+            return true;
+        }
+        return false;
     }
+
 
     //Death Menu and respawn
     public void Respawn()
