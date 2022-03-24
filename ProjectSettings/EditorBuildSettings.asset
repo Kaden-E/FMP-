@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menus/Main_Menu.unity
+    guid: b9a6746ff7d6953498eda235586dd960
+  - enabled: 1
+    path: Assets/Scenes/Menus/Loading_Screen.unity
+    guid: 759a0ebc6ababbc4b9ebefbea2b61ef8
+  - enabled: 1
+    path: Assets/Scenes/Menus/Options_Menu.unity
+    guid: 2ca314a6ed5c23c48bc752aca4164de9
+  - enabled: 1
+    path: Assets/Scenes/Hub.unity
+    guid: 1c93a1f091bcd904fa7b4b4f37b22025
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Dungeon_One.unity
     guid: ce6c32268dc89e24c9a1fb1d5adc6728
-  - enabled: 1
-    path: Assets/Scenes/Hub.unity
-    guid: 1c93a1f091bcd904fa7b4b4f37b22025
-  - enabled: 1
-    path: Assets/Scenes/Menus/Main_Menu.unity
-    guid: b9a6746ff7d6953498eda235586dd960
-  - enabled: 1
-    path: Assets/Scenes/Menus/Options_Menu.unity
-    guid: 2ca314a6ed5c23c48bc752aca4164de9
-  - enabled: 1
-    path: Assets/Scenes/Menus/Loading_Screen.unity
-    guid: 759a0ebc6ababbc4b9ebefbea2b61ef8
   m_configObjects: {}

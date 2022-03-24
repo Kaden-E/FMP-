@@ -8,16 +8,17 @@ public class SceneMovers : MonoBehaviour
 {
     public void ToOptions()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 
     public void ToMain()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(0);
     }
 
     public void ToGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(3);
     }
+
 }
