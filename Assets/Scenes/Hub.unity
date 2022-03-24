@@ -1127,7 +1127,7 @@ MonoBehaviour:
   player: {fileID: 872325731}
   weapon: {fileID: 536730481}
   pet: {fileID: 1295270266}
-  floatingTextManager: {fileID: 0}
+  floatingTextManager: {fileID: 846081371}
   hitPointBar: {fileID: 0}
   deathMenuAnim: {fileID: 0}
   HUD: {fileID: 0}
