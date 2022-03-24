@@ -10,10 +10,7 @@ public class Boss_music : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            audioData.Play(0);
-        }
+        audioData.Play(0);
         base.OnCollide(coll);
 
     }
