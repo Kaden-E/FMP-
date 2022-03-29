@@ -12,7 +12,7 @@ public class Portal : Collidable
         {
             //teleport the player
             GameManager.instance.savedState();
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(6);
 
         }
     }

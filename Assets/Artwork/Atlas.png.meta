@@ -305,6 +305,9 @@ TextureImporter:
   - first:
       213: -349028749020191069
     second: Bat_0
+  - first:
+      213: 2676561953846364279
+    second: Bomb_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -2550,7 +2553,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2558,6 +2561,27 @@ TextureImporter:
       bones: []
       spriteID: 3a6a046b330082bf0800000000000000
       internalID: -349028749020191069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_0
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778865e7aee052520800000000000000
+      internalID: 2676561953846364279
       vertices: []
       indices: 
       edges: []
