@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 public class EndPortal : Collidable
 {
 
-        protected override void OnCollide(Collider2D coll)
+    protected override void OnCollide(Collider2D coll)
     {
         if (coll.name == "Player")
         {
             //teleport the player
             GameManager.instance.savedState();
-            SceneManager.LoadScene(5);
-            
+            SceneManager.LoadScene(6);
+
 
 
         }
