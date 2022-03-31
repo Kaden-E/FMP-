@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EndPortal : MonoBehaviour
+public class EndPortal : Collidable
 {
-    // Start is called before the first frame update
-    void Start()
+
+        protected override void OnCollide(Collider2D coll)
     {
-        
+        if (coll.name == "Player")
+        {
+            //teleport the player
+            GameManager.instance.savedState();
+            SceneManager.LoadScene(5);
+            
+
+
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
 }
