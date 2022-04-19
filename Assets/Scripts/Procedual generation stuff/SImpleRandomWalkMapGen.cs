@@ -12,20 +12,21 @@ public class SImpleRandomWalkMapGen : AbstractDungeonGen
 
     protected override void RunRandomGen()
     {
-        HashSet<Vector2Int> FloorPos = RunRandomWalk();
+        HashSet<Vector2Int> FloorPos = RunRandomWalk(randomWalkParam);
         tilemapVisualiser.Clear();
         tilemapVisualiser.PaintFloorTiles(FloorPos);
+        WallGen.CreateWalls(FloorPos, tilemapVisualiser);
     }
 
-    protected HashSet<Vector2Int> RunRandomWalk()
+    protected HashSet<Vector2Int> RunRandomWalk(SimpleRandomWalkSO parameters)
     {
         var currentPos = startPos;
         HashSet<Vector2Int> FloorPos = new HashSet<Vector2Int>();
-        for (int i = 0; i < randomWalkParam.iterations; i++)
+        for (int i = 0; i < parameters.iterations; i++)
         {
-            var path = RandomDungeon.SimpleRandomWalk(currentPos, randomWalkParam.walkLength);
+            var path = RandomDungeon.SimpleRandomWalk(currentPos, parameters.walkLength);
             FloorPos.UnionWith(path);
-            if (randomWalkParam.StartRandomEachIteration)
+            if (parameters.StartRandomEachIteration)
             {
                 currentPos = FloorPos.ElementAt(Random.Range(0, FloorPos.Count));
             }
