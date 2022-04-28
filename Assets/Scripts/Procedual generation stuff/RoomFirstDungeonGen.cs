@@ -43,6 +43,7 @@ public class RoomFirstDungeonGen : SImpleRandomWalkMapGen
         foreach (var room in roomsList)
         {
             roomCenters.Add((Vector2Int)Vector3Int.RoundToInt(room.center));
+            Debug.Log(roomCenters.Count);
         }
         HashSet<Vector2Int> corridors = ConnectRooms(roomCenters);
         floor.UnionWith(corridors);

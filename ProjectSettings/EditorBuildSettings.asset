@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon_Two.unity
     guid: 5f71d771b3709a74cb62ad76e93b743e
+  - enabled: 1
+    path: Assets/Scenes/Procedual dungeon.unity
+    guid: fd0bcc6f42bbaec438ef30aa4e10f4c5
   m_configObjects: {}

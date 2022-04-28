@@ -21,5 +21,10 @@ public class SceneMovers : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
+    public void ToProceduralGen()
+    {
+        SceneManager.LoadScene(7);
+    }
+
 
 }

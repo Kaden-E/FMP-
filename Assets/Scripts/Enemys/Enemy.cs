@@ -13,8 +13,8 @@ public class Enemy : Mover
     public float chaseLenght = 5.0f;
     private bool chasing;
     private bool collidingWithPlayer;
-    private Transform playerTransform;
-    private Vector3 startingPos;
+    public Transform playerTransform;
+    public Vector3 startingPos;
 
 
     //HitBox
@@ -28,6 +28,8 @@ public class Enemy : Mover
         playerTransform = GameManager.instance.player.transform;
         startingPos = transform.position;
         hitBox = transform.GetChild(0).GetComponent<BoxCollider2D>();
+
+        playerTransform = transform.Find("Player");
     }
 
     private void FixedUpdate()
@@ -55,6 +57,7 @@ public class Enemy : Mover
             chasing = false;
 
         }
+        Debug.Log(playerTransform.position);
 
         //Check for overlaps
         collidingWithPlayer = false;
