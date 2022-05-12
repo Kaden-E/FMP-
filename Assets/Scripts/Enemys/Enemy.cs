@@ -34,6 +34,7 @@ public class Enemy : Mover
 
     private void FixedUpdate()
     {
+        Debug.Log(playerTransform.position);
         if(Vector3.Distance(playerTransform.position, startingPos) < chaseLenght)
         {
             if (Vector3.Distance(playerTransform.position, startingPos) < triggerLenght)

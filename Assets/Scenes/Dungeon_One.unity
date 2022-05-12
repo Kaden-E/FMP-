@@ -79818,6 +79818,10 @@ PrefabInstance:
       propertyPath: maxHitpoint
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5470488718866900949, guid: 111b60b1bec4ac146b2afec1876a6a05, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 4725515206151550970, guid: d39b27079505f9640a5a0c79f1deadc3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 111b60b1bec4ac146b2afec1876a6a05, type: 3}
 --- !u!4 &1134925584 stripped
@@ -80410,6 +80414,8 @@ MonoBehaviour:
   XpValue: 1
   triggerLenght: 1
   chaseLenght: 5
+  playerTransform: {fileID: 4725515206151550970, guid: d39b27079505f9640a5a0c79f1deadc3, type: 3}
+  startingPos: {x: 0, y: 0, z: 0}
   filter:
     useTriggers: 0
     useLayerMask: 0
@@ -81146,6 +81152,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cff915444e881d4fbc690be35b645cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!61 &1997069075
 BoxCollider2D:
   m_ObjectHideFlags: 0
