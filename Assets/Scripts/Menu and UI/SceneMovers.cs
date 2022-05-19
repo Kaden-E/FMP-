@@ -26,5 +26,9 @@ public class SceneMovers : MonoBehaviour
         SceneManager.LoadScene(7);
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 
 }
